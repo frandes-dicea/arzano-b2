@@ -30,7 +30,7 @@ jobs:
         run: |
           set -e
           for f in calendario classifica; do
-            curl -fsS --retry 3 --retry-delay 10 -m 90 -o /tmp/$f.json \
+            curl -fsS --retry 3 --retry-delay 10 -m 90 -A "Mozilla/5.0 (compatible; arzano-b2-site/1.0; +https://github.com/frandes-dicea/arzano-b2)" -o /tmp/$f.json \
               https://media.myvolley.net/public/json/2026/B2/F/H/$f.json
           done
 
